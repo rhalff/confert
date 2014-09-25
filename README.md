@@ -37,19 +37,15 @@ from xml2json:
 Default values:
 ```javascript
 var options = {
-    object: false,
-    reversible: false,
-    coerce: true,
-    sanitize: true,
-    trim: true,
-    arrayNotation: false
+  sanitize: true,
+  trim: true
 };
 
-var config = require('confert')('my_config');
+var config = require('confert')('my_config', options);
 
 ```
 
-For XML the root element required, yet the name is always ignored.
+For XML the root element is required, yet the name is always ignored.
 
 ## License
 (The MIT License)
