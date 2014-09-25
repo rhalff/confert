@@ -4,8 +4,12 @@ var   fs = require('fs');
 var extensions = ['.yml', '.yaml', '.ini', '.xml'];
 
 function resolve(filename) {
+  var parent = module.parent.parent.parent ?
+    module.parent.parent.parent :
+    // direct require && was not required indirect first
+    module.parent.parent;
   return path.resolve(
-    path.dirname(module.parent.parent.parent.filename),
+    path.dirname(parent.filename),
     filename
   );
 }
