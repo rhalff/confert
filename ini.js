@@ -1,6 +1,12 @@
-var fs  = require('fs');
-var ini = require('ini');
+var fs   = require('fs');
+var ini  = require('ini');
+var util = require('./_util');
 
 module.exports = function(file) {
-  return ini.parse( fs.readFileSync(file, 'utf8') );
+  if(typeof file === 'string') {
+    file = util.resolveFile(file);
+  }
+  return ini.parse(
+    fs.readFileSync(file.name, 'utf8')
+  );
 };

@@ -36,5 +36,41 @@ describe('Confert', function() {
 
  });
 
+ describe('Direct inclusion', function() {
+
+   describe('With an extension', function() {
+
+     it('should load yaml', function() {
+       require('../yaml')('./fixtures/yaml.yaml').should.eql(expected);
+     });
+
+     it('should load xml', function() {
+       require('../xml')('./fixtures/xml.xml').should.eql(expected);
+     });
+
+     it('should load ini', function() {
+       require('../ini')('./fixtures/ini.ini').should.eql(expected);
+     });
+
+   });
+
+   describe('Without an extension', function() {
+
+     it('should load yaml', function() {
+       require('../yaml')('./fixtures/yaml').should.eql(expected);
+     });
+
+     it('should load xml', function() {
+       require('../xml')('./fixtures/xml').should.eql(expected);
+     });
+
+     it('should load ini', function() {
+       require('../ini')('./fixtures/ini').should.eql(expected);
+     });
+
+   });
+
+ });
+
 
 });
