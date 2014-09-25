@@ -34,13 +34,14 @@ But it takes away the flexibility of absorbing any config file.
 Right now only the xml module receives some options, these are directly taken
 from xml2json:
 
-Default values:
 ```javascript
+// Default values:
 var options = {
   sanitize: true,
   trim: true
 };
 
+// Tries to load any extension, might .xml be found those options will be used.
 var config = require('confert')('my_config', options);
 
 ```
