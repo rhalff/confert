@@ -1,6 +1,9 @@
 Confert
 =======
 
+[![Build Status](https://travis-ci.org/rhalff/confert.svg?branch=master)](https://travis-ci.org/rhalff/confert)
+[![NPM version](https://img.shields.io/npm/v/confert.svg)](https://www.npmjs.org/package/confert)
+
 Require and convert config files of any type.
 
 Confert loads a named config file and leaves it up to the configer (user) in what kind of format it is.
