@@ -1,0 +1,18 @@
+<config>
+  <scope>global</scope>
+  <database>
+    <user>dbuser</user>
+    <password>dbpassword</password>
+    <name>test</name>
+  </database>
+  <paths>
+    <default>
+      <datadir>/var/lib/data</datadir>
+      <array>
+        <value>first value</value>
+        <value>second value</value>
+        <value>third value</value>
+      </array>
+    </default>
+  </paths>
+</config>
