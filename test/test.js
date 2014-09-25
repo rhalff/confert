@@ -36,6 +36,23 @@ describe('Confert', function() {
 
  });
 
+ describe('Without an extension *with* dot', function() {
+
+   it('should load yaml', function() {
+     Confert('./fixtures/yaml.development').should.eql(expected);
+   });
+
+   it('should load xml', function() {
+     Confert('./fixtures/xml.development').should.eql(expected);
+   });
+
+   it('should load ini', function() {
+     Confert('./fixtures/ini.development').should.eql(expected);
+   });
+
+ });
+
+
  describe('Direct inclusion', function() {
 
    describe('With an extension', function() {

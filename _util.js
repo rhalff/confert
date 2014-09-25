@@ -41,7 +41,7 @@ function resolveFile(filename) {
   var file;
   var ext = path.extname(filename);
 
-  if(ext) {
+  if(ext && extensions.indexOf(ext) >= 0) {
     file = resolve(filename);
   } else {
     file = findFile(filename);
