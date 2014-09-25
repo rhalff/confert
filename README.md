@@ -3,6 +3,8 @@ Confert
 
 [![Build Status](https://travis-ci.org/rhalff/confert.svg?branch=master)](https://travis-ci.org/rhalff/confert)
 [![NPM version](https://img.shields.io/npm/v/confert.svg)](https://www.npmjs.org/package/confert)
+[![Dependency Status](https://david-dm.org/rhalff/confert.png?theme=shields.io)](https://david-dm.org/rhalff/confert)
+[![Development Dependency Status](https://david-dm.org/rhalff/confert/dev-status.png?theme=shields.io)](https://david-dm.org/rhalff/confert#info=devDependencies)
 
 Require and convert config files of any type.
 
