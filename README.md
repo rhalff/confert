@@ -48,6 +48,85 @@ var config = require('confert')('my_config', options);
 
 For XML the root element is required, yet the name is always ignored.
 
+Example Configurations:
+
+XML:
+```xml
+<config>
+  <scope>global</scope>
+  <database>
+    <user>dbuser</user>
+    <password>dbpassword</password>
+    <name>test</name>
+  </database>
+  <paths>
+    <default>
+      <datadir>/var/lib/data</datadir>
+      <array>first value</array>
+      <array>second value</array>
+      <array>third value</array>
+    </default>
+  </paths>
+</config>
+```
+
+YAML:
+```coffee
+---
+scope: global
+database:
+  user: dbuser
+  password: dbpassword
+  name: test
+paths:
+  default:
+    datadir: /var/lib/data
+    array:
+      - 'first value'
+      - 'second value'
+      - 'third value'
+```
+
+INI:
+```ini
+; this comment is being ignored
+scope = global
+
+[database]
+user = dbuser
+password = dbpassword
+name = test
+
+[paths.default]
+datadir = /var/lib/data
+array[] = first value
+array[] = second value
+array[] = third value
+```
+
+All of the above will produce the exact same data structure:
+
+```json
+{
+  "scope": "global",
+  "database": {
+    "user": "dbuser",
+    "password": "dbpassword",
+    "name": "test"
+  },
+  "paths": {
+    "default": {
+      "datadir": "/var/lib/data",
+      "array": [
+        "first value",
+        "second value",
+        "third value"
+      ]
+    }
+  }
+}
+```
+
 ## License
 (The MIT License)
 
