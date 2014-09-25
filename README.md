@@ -1,12 +1,9 @@
 Confert
 =======
 
-Require and convert config files of any type
+Require and convert config files of any type.
 
-This module serves a very simple purpose, it loads a config fileaA
-
-As a bonus you can leave it up to the user of your program what type
-of config file to use.
+Confert loads a named config file and leaves it up to the configer (user) in what kind of format it is.
 
 ## Installation
 ```
@@ -18,9 +15,15 @@ $ npm install confert
 var config = require('confert')('my_config');
 ```
 
-This will look for the following files config.json, config.ini, config.xml
+This will look for the my_config files with the following extenstion:
 
-If you already know what the config type is, you can load these modules directly.
+ - .yml
+ - .yaml
+ - .ini
+ - .xml
+
+If you want to fixate the config type you can load these modules directly.
+
 ```javascript
 var config = require('confert/yaml')('my_config');
 var config = require('confert/ini')('my_config');
