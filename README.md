@@ -15,7 +15,7 @@ $ npm install confert --save
 var config = require('confert')('my_config');
 ```
 
-This will look for the my_config files with the following extenstion:
+This will look for a `my_config` file with one of the following extensions:
 
  - .yml
  - .yaml
