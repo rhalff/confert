@@ -104,9 +104,11 @@ array[] = second value
 array[] = third value
 ```
 
+
+#### Result
+
 All of the above will produce the exact same data structure:
 
-#### Required Result
 ```json
 {
   "scope": "global",
