@@ -48,9 +48,9 @@ var config = require('confert')('my_config', options);
 
 For XML the root element is required, yet the name is always ignored.
 
-Example Configurations:
+### Example Configurations:
 
-XML:
+#### XML:
 ```xml
 <config>
   <scope>global</scope>
@@ -70,7 +70,7 @@ XML:
 </config>
 ```
 
-YAML:
+#### YAML:
 ```coffee
 ---
 scope: global
@@ -87,7 +87,7 @@ paths:
       - 'third value'
 ```
 
-INI:
+#### INI:
 ```ini
 ; this comment is being ignored
 scope = global
@@ -106,6 +106,7 @@ array[] = third value
 
 All of the above will produce the exact same data structure:
 
+#### Required Result
 ```json
 {
   "scope": "global",
