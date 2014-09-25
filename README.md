@@ -52,7 +52,7 @@ For XML the root element is required, yet the name is always ignored.
 
 #### XML:
 ```xml
-<config>
+<config> <!-- NOTE: the first element (config in this case) will be ignored -->
   <scope>global</scope>
   <database>
     <user>dbuser</user>
