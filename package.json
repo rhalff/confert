@@ -1,6 +1,6 @@
 {
   "name": "confert",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Directly require config files of any type",
   "main": "index.js",
   "scripts": {
