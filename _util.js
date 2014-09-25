@@ -4,12 +4,14 @@ var   fs = require('fs');
 var extensions = ['.yml', '.yaml', '.ini', '.xml'];
 
 function resolve(filename) {
-  var parent = module.parent.parent.parent ?
-    module.parent.parent.parent :
-    // direct require && was not required indirect first
-    module.parent.parent;
+  var dirname;
+  if(/confert\/index.js$/.test(module.parent.parent.filename)) {
+    dirname = module.parent.parent.parent.filename;
+  } else {
+    dirname = module.parent.parent.filename;
+  }
   return path.resolve(
-    path.dirname(parent.filename),
+    path.dirname(dirname),
     filename
   );
 }
