@@ -2,10 +2,16 @@ var path = require('path');
 var yaml = require('./yaml');
 var  ini = require('./ini');
 var  xml = require('./xml');
+var   fs = require('fs');
 
-module.exports = function(file, opts) {
+module.exports = function(filename, opts) {
 
-  switch(path.extname(file)) {
+  var file = path.resolve(
+    path.dirname(module.parent.filename),
+    filename
+  );
+
+  switch(path.extname(filename)) {
 
     case '.yml':
     case '.yaml':

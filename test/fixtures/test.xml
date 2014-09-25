@@ -8,11 +8,9 @@
   <paths>
     <default>
       <datadir>/var/lib/data</datadir>
-      <array>
-        <value>first value</value>
-        <value>second value</value>
-        <value>third value</value>
-      </array>
+      <array>first value</array>
+      <array>second value</array>
+      <array>third value</array>
     </default>
   </paths>
 </config>

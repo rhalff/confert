@@ -1,5 +1,24 @@
-var da = require('./index');
+var should   = require('should');
+var Confert  = require('../index');
+var expected = require('./fixtures/test.json');
 
-console.log(JSON.stringify(da('./test.yaml'), null, 2));
-console.log(JSON.stringify(da('./test.ini'), null, 2));
-console.log(JSON.stringify(da('./test.xml'), null, 2));
+describe('Confert', function() {
+
+ describe('With an extensions', function() {
+
+   it('should load yaml', function() {
+     Confert('./fixtures/test.yaml').should.eql(expected);
+   });
+
+   it('should load xml', function() {
+     Confert('./fixtures/test.xml').should.eql(expected);
+   });
+
+   it('should load ini', function() {
+     Confert('./fixtures/test.ini').should.eql(expected);
+   });
+
+ });
+
+
+});
