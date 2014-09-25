@@ -7,7 +7,7 @@ Confert loads a named config file and leaves it up to the configer (user) in wha
 
 ## Installation
 ```
-$ npm install confert
+$ npm install confert --save
 ```
 
 ## Usage
