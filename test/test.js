@@ -18,6 +18,14 @@ describe('Confert', function() {
      Confert('./fixtures/test.ini').should.eql(expected);
    });
 
+   it('should load json', function() {
+     Confert('./fixtures/test.json').should.eql(expected);
+   });
+
+   it('should load js', function() {
+     Confert('./fixtures/test.js').should.eql(expected);
+   });
+
  });
 
  describe('Without an extension', function() {
@@ -32,6 +40,14 @@ describe('Confert', function() {
 
    it('should load ini', function() {
      Confert('./fixtures/ini').should.eql(expected);
+   });
+
+   it('should load json', function() {
+     Confert('./fixtures/json').should.eql(expected);
+   });
+
+   it('should load js', function() {
+     Confert('./fixtures/js').should.eql(expected);
    });
 
  });

@@ -3,7 +3,7 @@
 var path = require('path');
 var   fs = require('fs');
 
-var extensions = ['.yml', '.yaml', '.ini', '.xml'];
+var extensions = ['.yml', '.yaml', '.ini', '.xml', '.json', '.js'];
 
 function resolve(filename) {
   var dirname;
