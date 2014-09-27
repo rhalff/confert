@@ -13,6 +13,7 @@ Confert loads a named config file and leaves it up to the configer (user) in wha
 ## Installation
 ```
 $ npm install confert --save
+$ npm install xml2json --save (for xml support)
 ```
 
 ## Usage
