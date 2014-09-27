@@ -26,6 +26,8 @@ This will look for a `my_config` file with one of the following extensions:
  - .yaml
  - .ini
  - .xml
+ - .json
+ - .js
 
 If you want to fixate the config type you can load these modules directly.
 
