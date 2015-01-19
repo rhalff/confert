@@ -7,7 +7,17 @@ var extensions = ['.yml', '.yaml', '.ini', '.xml', '.json', '.js'];
 
 function resolve(filename) {
   var dirname;
-  if(/confert\/index.js$/.test(module.parent.parent.filename)) {
+  var isWindows;
+  var indexjsPattern;
+
+  isWindows = /^win/.test(process.platform);
+  if (isWindows) {
+    indexjsPattern = /confert\\index.js$/;
+  } else {
+    indexjsPattern = /confert\/index.js$/;
+  }
+
+  if(indexjsPattern.test(module.parent.parent.filename)) {
     dirname = module.parent.parent.parent.filename;
   } else {
     dirname = module.parent.parent.filename;
